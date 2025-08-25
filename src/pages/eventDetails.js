@@ -42,6 +42,7 @@ const EventDetails = () => {
                   <strong>Host: </strong>
                   {data.host}
                 </h5>
+                  <h5>Description: </h5>
                 <p className="card-text">{data.details}</p>
               </div>
             </div>
