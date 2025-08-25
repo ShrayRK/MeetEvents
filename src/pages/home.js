@@ -57,7 +57,7 @@ const HomePage = ({ searchData }) => {
           <ul className="row list-unstyled">
             {filterEvents.map((event) => (
               <li className="col-md-4 mt-5" key={event._id}>
-                <div className="card p-4">
+                <div className="card p-4 bg-transparent">
                   <img
                     src={event.image}
                     alt="Meet-Up"
