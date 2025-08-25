@@ -32,7 +32,7 @@ const EventDetails = () => {
         {/* <Link to="/" className="btn btn-secondary mb-3">
           ← Back to Events
         </Link> */}
-        <h2 className="px-5">{data.title}</h2>
+        <h2 className="px-4">{data.title}</h2>
         <div className="row">
           <div className="col-md-8 d-flex flex-column">
             <div className="card mb-3 flex-grow-1">
