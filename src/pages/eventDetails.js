@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import useFetch from "../useFetch";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 const EventDetails = () => {
   const { title } = useParams();
@@ -33,10 +32,10 @@ const EventDetails = () => {
         {/* <Link to="/" className="btn btn-secondary mb-3">
           ← Back to Events
         </Link> */}
+        <h2 className="container">{data.title}</h2>
         <div className="row">
-          <div className="col-md-8">
-            <h2>{data.title}</h2>
-            <div className="card mb-3">
+          <div className="col-md-8 d-flex flex-column">
+            <div className="card mb-3 flex-grow-1">
               <img src={data.image} className="card-img-top" alt="event-img" />
               <div className="card-body">
                 <h5 className="card-title">
@@ -46,68 +45,71 @@ const EventDetails = () => {
                 <p className="card-text">{data.details}</p>
               </div>
             </div>
+            <div className="row mt-3">
+              <div className="col-md-6">
+                <div className="card h-100">
+                  <div className="card-body">
+                    <div className="card-text mb-2">
+                      <p>
+                        <strong> Tags: </strong>
+                        <p>
+                          {data.tags.map((tag) => (
+                            <p className="btn btn-primary m-2">{tag}</p>
+                          ))}
+                        </p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="card h-100">
+                  <div className="card-body">
+                    <div className="card-text mb-2">
+                      <p>
+                        <strong> Information: </strong>
+                        <ul>
+                          {data.information.map((info, index) => (
+                            <li key={index}>{info}</li>
+                          ))}
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 d-flex flex-column">
+            <div className="card mb-3">
+              <div className="card-body">
+                <p>
+                  <strong>Venue: </strong>
+                  {data.venue}
+                </p>
+                <p>
+                  <strong>Duration: </strong>
+                  {data.duration}
+                </p>
+                <p>
+                  <strong>Price: ₹</strong>
+                  {data.price}
+                </p>
+              </div>
+            </div>
+
             <div className="card">
+              <img
+                src={data.speakerImage}
+                alt="Image"
+                classname="card-img-top"
+              />
               <div className="card-body">
                 <div className="card-text mb-2">
                   <p>
-                    <strong>Venue: </strong>
-                    {data.venue}
+                    <strong> Speaker: </strong>
+                    {data.speaker}
                   </p>
-                  <p>
-                    <strong>Duration: </strong>
-                    {data.duration}
-                  </p>
-                  <p>
-                    <strong>Price: ₹</strong>
-                    {data.price}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="pt-4">
-              <div className="card">
-                <div className="card-body">
-                  <div className="card-text mb-2">
-                    <p>
-                      <i class="bi bi-person-bounding-box"></i>
-                      <strong> Speaker: </strong>
-                      {data.speaker}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="pt-4">
-              <div className="card">
-                <div className="card-body">
-                  <div className="card-text mb-2">
-                    <p>
-                      <strong> Tags: </strong>
-                      <p>
-                        {data.tags.map((tag) => (
-                          <p className="btn btn-primary m-2">{tag}</p>
-                        ))}
-                      </p>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="pt-4">
-              <div className="card">
-                <div className="card-body">
-                  <div className="card-text mb-2">
-                    <p>
-                      <strong> Information: </strong>
-                      <p>
-                        {data.information.map((info) => (
-                          <p className="m-2">{info}</p>
-                        ))}
-                      </p>
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
