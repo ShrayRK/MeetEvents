@@ -33,7 +33,8 @@ const HomePage = ({ searchData }) => {
 
   if (searchData.trim() !== "") {
     filterEvents = filterEvents.filter((event) =>
-      (event.title?.toLowerCase() || "").includes(searchData.toLowerCase())
+      (event.title?.toLowerCase() || "").includes(searchData.toLowerCase()) || 
+      (event.tags || []).reduce((acc, tag) => acc + "" + (tag?.toLowerCase() || ""), "").includes(searchData.toLowerCase())
     );
   }
 
