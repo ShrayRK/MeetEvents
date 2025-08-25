@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
