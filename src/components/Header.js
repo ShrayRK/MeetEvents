@@ -15,7 +15,7 @@ const Header = ({ setSearchData }) => {
       <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
           <NavLink
-            className="navbar-brand d-flex align-items-center gap-2"
+            className="navbar-brand d-flex align-items-center gap-2 me-4"
             to="/"
           >
             <i className="bi bi-people-fill"></i>
@@ -23,7 +23,7 @@ const Header = ({ setSearchData }) => {
           </NavLink>
           <div className="d-flex">
             <input
-              className="me-2"
+              className="form-control me-3"
               type="text"
               placeholder="Search"
               onChange={(event) => setSearchTerm(event.target.value)}
