@@ -56,18 +56,19 @@ const HomePage = ({ searchData }) => {
         <div>
           <ul className="row list-unstyled">
             {filterEvents.map((event) => (
-              <li className="col-md-4 mt-5" key={event._id}>
-                <div className="card p-4 w-auto h-auto bg-transparent">
+              <li className="col-md-4 mt-5 d-flex" key={event._id}>
+                <div className="card p-4 w-100 h-100 bg-transparent">
                   <img
                     src={event.image}
                     alt="Meet-Up"
                     className="card-img-top"
+                    style={{objectFit: "cover", height: "200px"}}  
                   />
-                  <div className="card-body">
+                  <div className="card-body d-flex flex-column">
                     <Link to={`/event/${event.title}`}>
                       <h4 className="card-title">{event.title}</h4>
                     </Link>
-                    <p className="card-text">
+                    <p className="card-text mt-auto">
                       {new Date(event.timeAndDate).toLocaleString("en-IN", {
                         day: "numeric",
                         month: "long",
