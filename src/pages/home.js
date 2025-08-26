@@ -48,7 +48,7 @@ const HomePage = ({ searchData }) => {
             id="eventType"
             onChange={(event) => setFilter(event.target.value)}
           >
-            <option value="Both">Online/Offline</option>
+            <option value="Both">Both</option>
             <option value="Online">Online</option>
             <option value="Offline">Offline</option>
           </select>
@@ -57,7 +57,7 @@ const HomePage = ({ searchData }) => {
           <ul className="row list-unstyled">
             {filterEvents.map((event) => (
               <li className="col-md-4 mt-5" key={event._id}>
-                <div className="card p-4 bg-transparent">
+                <div className="card p-4 w-auto h-auto bg-transparent">
                   <img
                     src={event.image}
                     alt="Meet-Up"
