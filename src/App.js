@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="d-flex flex-column min-vh-100 bg-info-subtle">
       <Header setSearchData={setSearchData} />
-      <main className="flex-grow-1">
+      <main className="container flex-grow-1">
         <HomePage searchData={searchData} />
       </main>
       <Footer />
