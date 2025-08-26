@@ -15,13 +15,13 @@ const Header = ({ setSearchData }) => {
       <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
           <NavLink
-            className="navbar-brand d-flex align-items-center gap-2 me-4"
+            className="navbar-brand d-flex align-items-center gap-2 ms-4"
             to="/"
           >
             <i className="bi bi-people-fill"></i>
             <span className="text-danger fst-italic">Community Meet-up</span>
           </NavLink>
-          <div className="d-flex">
+          <div className="d-flex me-4">
             <input
               className="form-control me-3"
               type="text"
